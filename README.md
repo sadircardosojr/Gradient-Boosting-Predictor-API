@@ -40,6 +40,14 @@ Este projeto utiliza:
 
 ---
 
+## 🖼️ Exemplo de Resultado Visual
+
+A imagem abaixo ilustra a saída esperada da previsão feita com o modelo Gradient Boosting:
+
+![Exemplo de Previsão](poc.png)
+
+---
+
 ## 🛠️ Instalação e Execução com Docker
 
 ### 1. Clonar o repositório
@@ -131,6 +139,17 @@ from ia_model import IAGradientBoostingPredictor
 predictor = IAGradientBoostingPredictor(n_periodos=20, taxa_de_analise=0.8)
 df_resultado, erros = predictor.process_and_predict(json_data)
 ```
+---
+
+## 📊 Visualização (opcional)
+
+Você pode gerar um gráfico interativo com Plotly executando o script `ia.py` (fora do container):
+
+```bash
+python ia.py
+```
+
+O arquivo `grafico_interativo_YYYYMMDD_HHMMSS.html` será gerado e pode ser aberto no navegador.
 
 ---
 
@@ -148,3 +167,7 @@ netstat -ano | findstr :5000  # Windows
 ## 📄 Licença
 
 Este projeto está sob a licença MIT. Consulte o arquivo `LICENSE` para mais detalhes.
+
+
+
+
